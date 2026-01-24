@@ -15,3 +15,14 @@ links.forEach(link => {
     navLinks.classList.remove('active');
   });
 });
+
+// Fermer le menu en cliquant en dehors
+document.addEventListener('click', (e) => {
+  // Si le menu est ouvert ET qu'on clique en dehors du menu et du burger
+  if (navLinks.classList.contains('active') && 
+      !navLinks.contains(e.target) && 
+      !burgerMenu.contains(e.target)) {
+    burgerMenu.classList.remove('active');
+    navLinks.classList.remove('active');
+  }
+});
