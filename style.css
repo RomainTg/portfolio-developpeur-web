@@ -1,0 +1,180 @@
+/*BASE STYLES - MOBILE (0 à 480px)*/
+
+body {
+  background-color: #0a0a0a; /* Noir très légèrement grisé */
+  color: #f5f5f5; /* Blanc cassé pour moins de fatigue visuelle */
+  margin: 0;
+  padding: 0;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Bouton burger - visible sur mobile */
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1002;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Animation burger actif */
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menu mobile caché par défaut */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background-color: #0a0a0a;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+/* Menu ouvert */
+.nav-links.active {
+  right: 0;
+}
+
+.nav-links li {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #888;
+}
+
+.intro {
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+
+/*GRAND MOBILE (481px et plus)*/
+
+@media (min-width: 481px) {
+  
+}
+
+
+/*MOBILE LANDSCAPE / PHABLET (576px et plus)*/
+
+@media (min-width: 576px) {
+  
+}
+
+
+/*TABLETTE PORTRAIT (768px et plus)*/
+
+@media (min-width: 768px) {
+  
+.navigation {
+  position: static;
+}
+  
+/* Cacher le burger sur tablette+ */
+.burger-menu {
+  display: none;
+}
+  
+/* Menu horizontal */
+.nav-links {
+  position: static;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  background: transparent;
+  gap: 2rem;
+}
+  
+.nav-links a {
+  font-size: 1rem;
+}
+
+}
+
+
+/*TABLETTE LANDSCAPE (992px et plus)*/
+
+@media (min-width: 992px) {
+  
+}
+
+
+/*DESKTOP (1024px et plus)*/
+
+@media (min-width: 1024px) {
+  
+}
+
+
+/*LARGE DESKTOP (1280px et plus)*/
+
+@media (min-width: 1280px) {
+  
+}
+
+
+/* EXTRA LARGE DESKTOP (1920px et plus)*/
+
+@media (min-width: 1920px) {
+  
+}

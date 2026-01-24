@@ -4,14 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio - Romain Tang</title>
-        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="style.css">
         <meta name="description" content="Portfolio de Romain Tang, développeur web. Découvrez mes projets, compétences.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Monoton&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="generalSettings">
             <div class="nav_bar">
                 <nav class="navigation">
-                    <ul>
+                    <div class="logo">
+                        <a href="index.html">RT</a>
+                    </div>
+                        <button class="burger-menu" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    
+                    <ul class="nav-links">
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="#projets">Projets</a></li>
                         <li><a href="#hardSkills">Hard skills</a></li>
@@ -23,6 +35,23 @@
 
             <main>
                 <section class="intro">
+                    <div class="glow-background"></div>
+                    <div class="introduction">
+                        <div class="titre">
+                            <h1>Bienvenue sur mon portfolio!</h1>
+                        </div>
+                    </div>
+                        <div class="presentation">
+                            <p class="texteIntro">Je suis développeur web passionné par l'informatique et la création visuelle.<br>
+                                En 2024, j'ai décidé de me lancer dans le développement web, domaine qui attisait mon regard
+                                depuis tant d'années.<br> Aujourd'hui, j'ai la chance de pouvoir réaliser ce portfolio grâçe aux compétences
+                                acquises pendant ma formation au sein du CEFii d'Angers.<br> 
+                                Ici vous découvrirez ma personne, mes skills et mes expérimentations visuelles, et bien évidemment
+                                mes coordonées :)</p>
+                            <div class="introActions">
+                                <a href="assets/cv.pdf" download class="btnPrimaire">Télécharger mon CV</a>
+                            </div>
+                        </div>
                 </section>
 
                 <section class="projets" id="projets">
@@ -41,5 +70,6 @@
                 <p>&copy; 2025 - Romain Tang. Tous droits réservés.</p>
             </footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
