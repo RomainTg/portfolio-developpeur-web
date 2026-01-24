@@ -27,3 +27,19 @@
   inset: 60% auto auto 60%;
   transform: rotate(-60deg);
 }
+
+.glow-background3 {
+  background-color: hsla(245, 84%, 54%, 0.6);
+  z-index: -1;
+  opacity: .7;
+  filter: blur(10vw);
+  border-radius: 50%;
+  width: 40vw;
+  max-width: 863px;
+  height: 90vw;
+  max-height: 923px;
+  position: absolute;
+  inset: 140% auto auto 5%;
+  transform: rotate(50deg);
+}
+
