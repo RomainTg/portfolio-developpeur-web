@@ -84,3 +84,44 @@ const observer = new IntersectionObserver(animateSkills, observerOptions);
 if (skillsSection) {
   observer.observe(skillsSection);
 }
+
+// Gestion du formulaire Formspree
+const contactForm = document.querySelector('.contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    const button = contactForm.querySelector('.btn_envoi');
+    
+    // Désactiver le bouton pendant l'envoi
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Succès
+        alert('Message envoyé avec succès ! Je vous répondrai bientôt.');
+        contactForm.reset();
+      } else {
+        // Erreur
+        alert('Oops, une erreur est survenue. Réessayez plus tard.');
+      }
+    } catch (error) {
+      alert('Erreur de connexion. Vérifiez votre internet.');
+    }
+    
+    // Réactiver le bouton
+    button.disabled = false;
+    button.textContent = 'Envoyer';
+  });
+}
