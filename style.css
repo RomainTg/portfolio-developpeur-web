@@ -400,7 +400,69 @@ footer {
 /*TABLETTE LANDSCAPE (992px et plus)*/
 
 @media (min-width: 992px) {
-  
+
+.navigation {
+  padding: 1rem 5rem 0 3rem;
+  justify-content: space-between;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8rem;
+  gap: 3rem;
+}
+
+.introduction {
+  font-size: 1.5rem;
+}
+
+.presentation {
+  padding-top: 5em;
+  gap: 1rem;
+}
+
+.realisationTitre {
+  text-align: center;
+}
+
+.hardSkills {
+  text-align: center;
+}
+
+.listeLangage {
+  justify-content: center;
+}
+
+.listeOutils {
+  justify-content: center;
+}
+
+.softSkills {
+  text-align: center;
+}
+
+.skill-item {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem auto;
+}
+
+.contact h1, .contact p {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  justify-self: center;
+  width: 70%;
+}
+
+.btn_envoi {
+  margin-left: 8.8rem;
 }
 
 
