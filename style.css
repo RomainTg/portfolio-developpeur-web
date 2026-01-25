@@ -1,4 +1,8 @@
 /*BASE STYLES - MOBILE (0 à 480px)*/
+* {
+  box-sizing: border-box; /* ✅ Applique à TOUS les éléments */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -79,7 +83,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -388,7 +392,7 @@ footer {
 @media (min-width: 768px) {
   
 .navigation {
-  justify-content: space-evenly;
+  padding: 0.5em 1.5em 2em 1.5em;
 }
   
 /* Cacher le burger sur tablette+ */
@@ -409,6 +413,27 @@ footer {
   width: fit-content;
   font-size: 1rem;
   white-space: nowrap; 
+}
+
+.intro {
+  flex-direction: row;
+  gap: 2rem;
+  text-align: left;
+  padding: 0 4em 0 4em;
+}
+
+.introduction {
+  font-size: 1.2em;
+}
+
+.presentation {
+  margin-top: 4.5em;
+  align-items: flex-start;
+  font-size: 0.9em;
+}
+
+.softSkills {
+  padding: 0 6em 0 6em;
 }
 
 }
