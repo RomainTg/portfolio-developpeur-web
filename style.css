@@ -371,7 +371,7 @@ footer {
 @media (min-width: 768px) {
   
 .navigation {
-  position: static;
+  justify-content: space-evenly;
 }
   
 /* Cacher le burger sur tablette+ */
@@ -382,15 +382,16 @@ footer {
 /* Menu horizontal */
 .nav-links {
   position: static;
-  width: auto;
-  height: auto;
+  width: fit-content;
+  display: flex;
   flex-direction: row;
   background: transparent;
-  gap: 2rem;
 }
   
 .nav-links a {
+  width: fit-content;
   font-size: 1rem;
+  white-space: nowrap; 
 }
 
 }
