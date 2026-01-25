@@ -27,6 +27,8 @@ document.addEventListener('click', (e) => {
   }
 });
 
+
+
 // Animation des jauges au scroll
 const observerOptions = {
   threshold: 0.3,
@@ -57,6 +59,8 @@ const animateSkills = (entries, observer) => {
     }
   });
 };
+
+
 
 // Animation du compteur de pourcentage
 function animateCounter(element, start, end, duration) {
@@ -125,3 +129,48 @@ if (contactForm) {
     button.textContent = 'Envoyer';
   });
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.id = 'scrollTopBtn';
+    scrollTopBtn.innerHTML = '↑';
+    scrollTopBtn.setAttribute('aria-label', 'Retour en haut de page');
+    document.body.appendChild(scrollTopBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        const duration = 100;
+        const startPosition = window.pageYOffset;
+        const distance = -startPosition;
+        let startTime = null;
+
+        function easeInOutCubic(t) {
+            return t < 0.5 
+                ? 4 * t * t * t 
+                : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            const ease = easeInOutCubic(progress);
+
+            window.scrollTo(0, startPosition + distance * ease);
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        requestAnimationFrame(animation);
+    });
+});

@@ -69,10 +69,56 @@
   height: 90vw;
   max-height: 923px;
   position: absolute;
-  inset: 85% auto auto 5%;
+  inset: 60% auto auto 50%;
   transform: rotate(70deg);
 }
 
+#scrollTopBtn {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: all 0.3s ease-in;
+}
+
+#scrollTopBtn.visible {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+#scrollTopBtn:hover {
+    background: transparent;
+}
+
+/* état normal */
+#scrollTopBtn {
+    transform: scale(0.8);
+}
+
+/* visible */
+#scrollTopBtn.visible {
+    transform: scale(1);
+}
+
+/* clic */
+#scrollTopBtn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+}
 /*GRAND MOBILE (481px et plus)*/
 
 @media (min-width: 481px) {
