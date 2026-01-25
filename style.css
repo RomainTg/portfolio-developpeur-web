@@ -461,7 +461,7 @@ footer {
 }
 
 .presentation {
-  padding-top: 5em;
+  margin-top: 3.2em;
   gap: 1rem;
 }
 
@@ -556,9 +556,17 @@ footer {
 /* EXTRA LARGE DESKTOP (1920px et plus)*/
 
 @media (min-width: 1920px) {
-  
+
+.navigation {
+  padding: 1.5rem 8rem 0 5rem;
+}
+
 .nav-links a, .logo {
   font-size: 1.8rem;
+}
+
+.intro {
+  gap: 7em;
 }
 
 .introduction {
