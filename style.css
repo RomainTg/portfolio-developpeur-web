@@ -518,6 +518,10 @@ footer {
   width: 70%;
 }
 
+.contactForm .input-group{
+  width: 50%;
+}
+
 }
 
 /*DESKTOP (1024px et plus)*/
@@ -559,12 +563,20 @@ footer {
   height: 6em;
 }
 
+.contactForm .input-group{
+  width: 50%;
+}
+
 }
 
 
 /*LARGE DESKTOP (1280px et plus)*/
 
 @media (min-width: 1280px) {
+
+.contactForm .input-group{
+  width: 50%;
+}
 
 }
 
@@ -613,6 +625,10 @@ footer {
   margin-right: 1rem;
   width: 10em;
   height: 10em;
+}
+
+.contactForm .input-group{
+  width: 50%;
 }
 
 }
