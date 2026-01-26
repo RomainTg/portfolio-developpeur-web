@@ -212,10 +212,10 @@
 @media (min-width: 1920px) {
   
 .glow-background, .glow-background2, .glow-background3, .glow-background4 {
-  width: 40vw;
-  max-width: 603px;
-  height: 100vw;
-  max-height: 1200px;
+  width: 30vw;
+  max-width: 503px;
+  height: 60vw;
+  max-height: 1000px;
 }
 
 .glow-background {
@@ -223,7 +223,15 @@
 }
 
 .glow-background2 {
-  inset: 20% auto auto 62%;
+  inset: 20% auto auto 60%;
+}
+
+.glow-background3 {
+  inset: 45% auto auto -5%;
+}
+
+.glow-background4 {
+  inset: 65% auto auto 70%;
 }
 
 }
