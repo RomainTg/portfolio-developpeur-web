@@ -172,7 +172,7 @@ body {
 .listeLangage img {
   margin-right: 0.5rem;
   width: 4em;
-  height: 4em;
+  height: 4em; 
 }
 
 .listeOutils {
@@ -371,6 +371,21 @@ body {
 footer {
   text-align: left;
   padding: 1rem 2rem;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-8px);
+  }
 }
 
 /*GRAND MOBILE (481px et plus)*/

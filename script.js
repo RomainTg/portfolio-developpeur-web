@@ -174,3 +174,36 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animation);
     });
 });
+
+// Observer pour déclencher l'animation jump sur les images
+const observerImages = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Récupérer toutes les images de la section
+      const langageImages = entry.target.querySelectorAll('.listeLangage img');
+      const outilsImages = entry.target.querySelectorAll('.listeOutils img');
+      const allImages = [...langageImages, ...outilsImages];
+      
+      // Animer chaque image avec un délai progressif
+      allImages.forEach((img, index) => {
+        setTimeout(() => {
+          img.style.animation = 'none';
+          // Force reflow pour redémarrer l'animation
+          void img.offsetWidth;
+          img.style.animation = 'jump 0.8s ease-out';
+        }, index * 200); // 100ms de délai entre chaque image
+      });
+      
+      // Désobserver après l'animation pour qu'elle ne se répète pas ? 
+      //observerImages.unobserve(entry.target); -- commentée pour permettre l'animation à chaque scroll
+    }
+  });
+}, {
+  threshold: 0.3 // L'animation se déclenche quand 30% de la section est visible
+});
+
+// Observer la section hardSkills
+const hardSkillsSection = document.querySelector('.hardSkills');
+if (hardSkillsSection) {
+  observerImages.observe(hardSkillsSection);
+}
