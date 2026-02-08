@@ -156,6 +156,27 @@ body {
   padding: 3rem 2rem;
 }
 
+.realisationTitre p {
+  margin-bottom: 3em;
+}
+
+.meteoApp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.meteoLabel {
+  font-size: 0.8rem;
+}
+
+#meteoScreen {
+  width: 250px;
+  height: 150px;
+  border-radius: 0 20px 0 20px;
+}
+
 .hardSkills {
   text-align: center;
   padding: 1rem 2rem;
@@ -398,6 +419,12 @@ footer, .mentions, .politique {
 
 @media (min-width: 481px) {
   
+#meteoScreen {
+  width: 300px;
+  height: 200px;
+  border-radius: 0 20px 0 20px;
+}
+
 }
 
 
@@ -453,6 +480,12 @@ footer, .mentions, .politique {
   font-size: 0.9em;
 }
 
+#meteoScreen {
+  width: 400px;
+  height: 275px;
+  border-radius: 0 20px 0 20px;
+}
+
 .softSkills {
   padding: 0 6em 0 6em;
 }
@@ -488,6 +521,12 @@ footer, .mentions, .politique {
 
 .realisationTitre {
   text-align: center;
+}
+
+#meteoScreen {
+  width: 500px;
+  height: 325px;
+  border-radius: 0 20px 0 20px;
 }
 
 .hardSkills {
@@ -555,6 +594,12 @@ footer, .mentions, .politique {
 
 .projets {
   padding: 1rem 2rem;
+}
+
+#meteoScreen {
+  width: 500px;
+  height: 325px;
+  border-radius: 0 20px 0 20px;
 }
 
 .listeLangage img {
