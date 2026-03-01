@@ -400,6 +400,10 @@ footer, .mentions, .politique {
   color: #f5f5f5;
 }
 
+#scrollTopBtn {
+  scale: 0.7;
+}
+
 @keyframes jump {
   0%, 100% {
     transform: translateY(0);
@@ -488,6 +492,10 @@ footer, .mentions, .politique {
 
 .softSkills {
   padding: 0 6em 0 6em;
+}
+
+#scrollTopBtn {
+  scale: 0.8;
 }
 
 }
@@ -624,6 +632,10 @@ footer {
   align-items: center;
 }
 
+#scrollTopBtn {
+  scale: 0.8;
+}
+
 }
 
 
@@ -633,6 +645,10 @@ footer {
 
 .contactForm .input-group{
   width: 50%;
+}
+
+#scrollTopBtn {
+  scale: 0.9;
 }
 
 }
