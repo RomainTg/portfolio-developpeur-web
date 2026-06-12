@@ -165,19 +165,18 @@ body {
   margin-bottom: 3em;
 }
 
-.meteoApp {
+.meteoApp, .marioArt {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  align-items: center;
 }
 
-.meteoLabel {
+.meteoLabel, .marioLabel {
   font-size: 0.8rem;
   font-style: italic;
 }
 
-#meteoScreen {
+#meteoScreen, #marioArt {
   width: 250px;
   height: 150px;
   border-radius: 0 20px 0 20px;
@@ -429,7 +428,7 @@ footer, .mentions, .politique {
 
 @media (min-width: 481px) {
   
-#meteoScreen {
+#meteoScreen, #marioArt {
   width: 300px;
   height: 200px;
   border-radius: 0 20px 0 20px;
@@ -490,7 +489,7 @@ footer, .mentions, .politique {
   font-size: 0.9em;
 }
 
-#meteoScreen {
+#meteoScreen, #marioArt {
   width: 400px;
   height: 275px;
   border-radius: 0 20px 0 20px;
@@ -537,8 +536,8 @@ footer, .mentions, .politique {
   text-align: center;
 }
 
-#meteoScreen {
-  width: 500px;
+#meteoScreen, #marioArt {
+  width: 450px;
   height: 325px;
   border-radius: 0 20px 0 20px;
 }
@@ -610,9 +609,14 @@ footer, .mentions, .politique {
   padding: 1rem 2rem;
 }
 
-#meteoScreen {
-  width: 500px;
-  height: 325px;
+.projetsContainer1 {
+  display: flex;
+  justify-content: center;
+}
+
+#meteoScreen, #marioArt {
+  width: 425px;
+  height: 250px;
   border-radius: 0 20px 0 20px;
 }
 
