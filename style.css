@@ -491,6 +491,11 @@ footer, .mentions, .politique {
   scale: 0.7;
 }
 
+#mentions, #politique {
+  padding: 1rem 3rem 1rem 3rem;
+  text-align: left;
+}
+
 @keyframes jump {
   0%, 100% {
     transform: translateY(0);
@@ -781,6 +786,11 @@ footer {
 
 .contactForm .input-group{
   width: 50%;
+}
+
+#mentions, #politique {
+  padding: 3rem 4rem 3rem 5rem;
+  text-align: left;
 }
 
 }
